@@ -125,7 +125,7 @@ a { color: var(--accent); }
       <button type="button" data-view="room" aria-pressed="true">Room</button>
       <button type="button" data-view="front">Front</button>
       <button type="button" data-view="back">Back</button>
-      <button type="button" data-view="side">Right side</button>
+      <button type="button" data-view="side">Corner gap</button>
       <button type="button" data-view="top">Top</button>
     </div>
     <div class="hint" id="hint">drag to orbit · right-drag to pan · scroll to zoom · hover for details</div>
@@ -136,7 +136,7 @@ a { color: var(--accent); }
     <header>
       <div class="eyebrow">IKEA HOLMERUD side table · 80.5 × 30.5 × 52 cm</div>
       <h1>Holmerud homelab</h1>
-      <p class="lede">FRITZ!Box 6660 Cable, two Raspberry Pi 5, two SSDs and a Home Assistant Connect ZBT-2 on one HOLMERUD, with every cable routed along an edge or an underside. The table geometry comes from your SketchUp model, to the millimetre.</p>
+      <p class="lede">FRITZ!Box 6660 Cable, two Raspberry Pi 4 in Geekworm P173 cases, four SSDs on a powered hub and a Home Assistant Connect ZBT-2 on one HOLMERUD, in the corner between the LAN hole and the coax outlet. Every cable runs along an edge or an underside. The table geometry comes from your SketchUp model, to the millimetre.</p>
     </header>
 
     <section aria-labelledby="h-build">
@@ -171,9 +171,9 @@ a { color: var(--accent); }
       <div class="tablewrap"><table>
         <thead><tr><th>Space</th><th>Holds</th></tr></thead>
         <tbody>
-          <tr><td><span class="zone-name">Upper slot</span><span class="sub num">53 × 30.5 × 10.5 cm</span></td><td>FRITZ!Box, centred, ports to the back. 5.5 cm of air above it, open front and back.</td></tr>
-          <tr><td><span class="zone-name">Lower slot</span><span class="sub num">53 × 30.5 × 20.5 cm</span></td><td>SSD · Pi 5 (Home Assistant) · SSD · Pi 5 (server), fronts in one line.</td></tr>
-          <tr><td><span class="zone-name">Open niche</span><span class="sub num">24.5 × 30.5 × 32.5 cm</span></td><td>ZBT-2, standing free at the low end, as far from the router and USB 3 as the table allows.</td></tr>
+          <tr><td><span class="zone-name">Upper slot</span><span class="sub num">53 × 30.5 × 10.5 cm</span></td><td>From the corner: four SSDs on edge with the powered hub behind them · Pi 4 (server) · Pi 4 (Home Assistant).</td></tr>
+          <tr><td><span class="zone-name">Lower slot</span><span class="sub num">53 × 30.5 × 20.5 cm</span></td><td>FRITZ!Box, flat, hard against the tall end in the corner, where the 30 cm wall cable reaches. 27 cm free on its right.</td></tr>
+          <tr><td><span class="zone-name">Open niche</span><span class="sub num">24.5 × 30.5 × 32.5 cm</span></td><td>ZBT-2, standing free at the room end, as far from the router, hub and SSDs as the table allows.</td></tr>
           <tr><td><span class="zone-name">Under the deck, back</span><span class="sub num">77.5 × 14.5 × 16.5 cm</span></td><td>Power strip and all three power supplies, hidden behind the centre rail.</td></tr>
           <tr><td><span class="zone-name">Top</span><span class="sub num">80.5 × 30.5 cm</span></td><td>Left clear for a lamp or a plant.</td></tr>
           <tr><td><span class="zone-name">Under the deck, front</span><span class="sub num">77.5 × 14.5 × 16.5 cm</span></td><td>Free. The TRIXIG box with the spare clips fits here.</td></tr>
@@ -203,10 +203,10 @@ a { color: var(--accent); }
     <section aria-labelledby="h-assume">
       <h2 id="h-assume">Assumptions</h2>
       <ul class="plain note">
-        <li>Raspberry Pi 5 in the official case (9.4 × 6.3 × 3.1 cm). A Pi 4 has the same footprint and the same USB-C side.</li>
-        <li>2.5" SATA SSDs in USB enclosures (12.6 × 8 × 1.4 cm), one per Pi. NVMe sticks fit the same spots.</li>
-        <li>Wall outlets at the standard 30 cm height, behind the right half of the table. Move them in your head if yours differ; the riser stays the same.</li>
-        <li>FRITZ!Box 6660 Cable rear port order is approximate. Coax, power and LAN all land on the back, which is what the routing needs.</li>
+        <li>Raspberry Pi 4B in Geekworm P173 cases (9 × 6.5 × 3.3 cm), one red, one black as in your photo. Which Pi runs Home Assistant is a guess.</li>
+        <li>SSDs drawn as 2.5" enclosures (12.6 × 8 × 1.4 cm). Smaller NVMe sticks stand in the same row with room to spare.</li>
+        <li>Corner on the left as seen from the room. Table 4 cm off the back wall and 6 cm off the side wall. LAN hole near the floor at the corner, coax outlet at 30 cm on the side wall, as in your sketch. The power socket, low behind the centre rail, is assumed.</li>
+        <li>FRITZ!Box rear, seen from behind, left to right: FON, LAN 2.5G, LAN 1 to 4, cable, power (Vodafone help and Hardwareluxx). Exact spacing is approximate.</li>
         <li>Table: panel thickness 1.5 cm and every edge position read from your <span class="num">IkeaHOLMERUD.skp</span>.</li>
       </ul>
       <p class="note" style="margin-top:12px">Specs: <a href="https://www.ikea.com/gb/en/p/holmerud-side-table-oak-effect-40541421/" target="_blank" rel="noopener">HOLMERUD</a>, <a href="https://www.home-assistant.io/connect/zbt-2" target="_blank" rel="noopener">Connect ZBT-2</a>, <a href="https://www.digitec.ch/en/s1/product/fritz-box-6660-cable-routers-13263555" target="_blank" rel="noopener">FRITZ!Box 6660 Cable</a>, <a href="https://www.ikea.com/cz/en/p/trixig-150-piece-cable-management-set-40546904/" target="_blank" rel="noopener">TRIXIG</a>.</p>
@@ -230,12 +230,11 @@ import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer
 const OAK_SRC = 'data:image/jpeg;base64,__OAK__';
 
 // ---------- HOLMERUD geometry in cm, read from the SketchUp model ----------
-// x runs along the table (0 = low end, 80.5 = tall end), y is up, z is depth (+ towards the room).
+// x runs along the table (0 = tall end in the corner, 80.5 = low end), y is up, z is depth (+ towards the room).
 const L = 80.5, D = 30.5, H = 52, T = 1.5;
 const ZF = D / 2, ZB = -D / 2;
 const WALL = ZB - 4;                       // table stands 4 cm off the wall
 const Y = { top0: 50.5, shelf0: 38.5, shelf1: 40, deck0: 16.5, deck1: 18, rail0: 7 };
-const X = { div0: 24.5, div1: 26, fin0: 15, tall0: 79 };
 
 // ---------- renderer, scene, camera ----------
 const stage = document.getElementById('stage');
@@ -396,42 +395,61 @@ function addLabel(text, pos, cls, meta, kind = 'device') {
   return o;
 }
 
-// ---------- room ----------
+// ---------- room: the corner ----------
+// Seen from the room the corner is on the left: back wall (LAN hole at the corner, near the floor)
+// and side wall (coax outlet) meet behind the tall end.
+const SIDE = -6;                           // side wall, 6 cm past the tall end
 const floor = new THREE.Mesh(new THREE.PlaneGeometry(900, 900), floorMat);
 floor.rotation.x = -Math.PI / 2; floor.position.set(40, 0, 60); floor.receiveShadow = true; scene.add(floor);
-const wallG = new THREE.Group();
-const wall = new THREE.Mesh(new THREE.PlaneGeometry(420, 240), wallMat);
-wall.position.set(40, 120, WALL); wall.receiveShadow = true; wallG.add(wall);
-const skirt = boxAt([-170, 250], [0, 6], [WALL, WALL + 1.5], skirtMat); wallG.add(skirt);
-scene.add(wallG);
+const wallBack = new THREE.Group(), wallSide = new THREE.Group();
+{
+  const w = new THREE.Mesh(new THREE.PlaneGeometry(330 - SIDE, 240), wallMat);
+  w.position.set((SIDE + 330) / 2, 120, WALL); w.receiveShadow = true; wallBack.add(w);
+  wallBack.add(boxAt([SIDE, 330], [0, 6], [WALL, WALL + 1.5], skirtMat));
+  const s = new THREE.Mesh(new THREE.PlaneGeometry(320, 240), wallMat);
+  s.rotation.y = Math.PI / 2; s.position.set(SIDE, 120, WALL + 160); s.receiveShadow = true; wallSide.add(s);
+  wallSide.add(boxAt([SIDE, SIDE + 1.5], [0, 6], [WALL, WALL + 320], skirtMat));
+}
+scene.add(wallBack, wallSide);
 
-// Wall outlets: a double Schuko socket and a coax multimedia outlet, 30 cm above the floor.
-const SOCKET = { x: 75.4, y: 30 }, COAX = { x: 86.5, y: 28.2 };
+// Outlets. LAN hole and coax outlet are from your sketch; the power socket position is assumed.
+const SOCKET = { x: 44, y: 12 }, HOLE = { x: SIDE + 2.5, y: 8 }, COAX = { y: 28.2, z: 0 };
 {
   const g = new THREE.Group();
-  const plate = boxAt([65.1, 78.9], [26, 34], [WALL, WALL + 1.0], MAT.plastic, 0.4); g.add(plate);
-  for (const sx of [68.6, 75.4]) {
+  g.add(boxAt([SOCKET.x - 3.4, SOCKET.x + 10.4], [SOCKET.y - 4, SOCKET.y + 4], [WALL, WALL + 1.0], MAT.plastic, 0.4));
+  for (const sx of [SOCKET.x, SOCKET.x + 6.8]) {
     const cup = new THREE.Mesh(new THREE.CylinderGeometry(2.0, 2.0, 0.4, 36), std(0xe2e2df, 0.6));
-    cup.rotation.x = Math.PI / 2; cup.position.set(sx, 30, WALL + 1.05); g.add(cup);
+    cup.rotation.x = Math.PI / 2; cup.position.set(sx, SOCKET.y, WALL + 1.05); g.add(cup);
   }
-  const mm = boxAt([COAX.x - 3.9, COAX.x + 3.9], [24.2, 32.0], [WALL, WALL + 1.2], MAT.plastic, 0.4); g.add(mm);
-  for (const [cy, r] of [[30.6, 0.65], [28.2, 0.55]]) {
+  addItem(g, { wall: 'back', name: 'Power socket', dims: 'Schuko double socket, low on the wall', info: 'Assumed position, low behind the centre rail so it stays out of sight. Feeds the power strip.', step: 1 });
+}
+{
+  const g = new THREE.Group();
+  const ring = new THREE.Mesh(new THREE.TorusGeometry(1.1, 0.25, 12, 32), std(0xe8e6e1, 0.7)); ring.position.set(HOLE.x, HOLE.y, WALL + 0.1); g.add(ring);
+  const hole = new THREE.Mesh(new THREE.CircleGeometry(1.0, 32), std(0x111111, 0.9)); hole.position.set(HOLE.x, HOLE.y, WALL + 0.02); g.add(hole);
+  addItem(g, { wall: 'back', name: 'LAN hole', dims: 'near the floor, right at the corner', info: 'A patch cable comes out here with about 30 cm of reach. That reach decides where the FRITZ!Box can go.', step: 1 });
+}
+{
+  const g = new THREE.Group();
+  g.add(boxAt([SIDE, SIDE + 1.2], [24.2, 32.0], [COAX.z - 3.9, COAX.z + 3.9], MAT.plastic, 0.4));
+  for (const [cy, r] of [[30.6, 0.65], [COAX.y, 0.55]]) {
     const c = new THREE.Mesh(new THREE.CylinderGeometry(r, r, 1.0, 20), MAT.metal);
-    c.rotation.x = Math.PI / 2; c.position.set(COAX.x, cy, WALL + 1.6); g.add(c);
+    c.rotation.z = Math.PI / 2; c.position.set(SIDE + 1.6, cy, COAX.z); g.add(c);
   }
-  addItem(g, { wall: true, name: 'Wall outlets', dims: 'Schuko double socket + coax multimedia outlet at 30 cm', info: 'Assumed position: socket behind the tall end, coax outlet just past it. The coax "Data" port feeds the FRITZ!Box; one socket feeds the power strip.', step: 1 });
+  addItem(g, { wall: 'side', name: 'Coax multimedia outlet', dims: 'on the side wall, facing the tall end', info: 'The "Data" port feeds the FRITZ!Box cable port, 20 cm away round the corner.', step: 1 });
 }
 
 // ---------- HOLMERUD ----------
+const TX = { tall: [0, T], low: [L - T, L], div: [54.5, 56], fin: [56, 65.5], shelf: [T, 54.5], deck: [T, L], rail: [T, L - T] };
 const tableParts = [
   ['Top', [0, L], [Y.top0, H], [ZB, ZF], 'Top', '80.5 × 30.5 × 1.5 cm', 'Max load 15 kg. Kept clear on purpose.'],
-  ['Tall end panel', [X.tall0, L], [0, Y.top0], [ZB, ZF], 'Side', '50.5 × 30.5 × 1.5 cm', 'Its outer face near the back corner carries the vertical cable riser, out of sight from the room.'],
-  ['Deck', [0, X.tall0], [Y.deck0, Y.deck1], [ZB, ZF], 'Deck', '79 × 30.5 × 1.5 cm at 18 cm', 'Max 5 kg per shelf. Its back edge doubles as the cable rail for the ZBT-2 lead.'],
-  ['Low end panel', [0, T], [0, Y.deck0], [ZB, ZF], 'Side', '16.5 × 30.5 × 1.5 cm', 'Closes the base at the low end.'],
-  ['Centre rail', [T, X.tall0], [Y.rail0, Y.deck0], [-0.75, 0.75], 'Rail', '77.5 × 9.5 × 1.5 cm, 7 cm above the floor', 'The power strip is screwed to its back face, so the rail hides the whole power deck from the room.'],
-  ['Divider', [X.div0, X.div1], [Y.deck1, Y.top0], [ZB, ZF], 'Divider', '32.5 × 30.5 × 1.5 cm', 'Separates the open niche from the two slots.'],
-  ['Fin', [X.fin0, X.div0], [Y.deck1, Y.top0], [-0.75, 0.75], 'Fin', '9.5 × 32.5 × 1.5 cm', 'Stiffens the cantilevered top. It splits the inner part of the niche front and back.'],
-  ['Shelf', [X.div1, X.tall0], [Y.shelf0, Y.shelf1], [ZB, ZF], 'Shelf', '53 × 30.5 × 1.5 cm at 38.5 cm', 'Max 5 kg. Above it the 10.5 cm upper slot, below it the 20.5 cm lower slot.'],
+  ['Tall end panel', TX.tall, [0, Y.top0], [ZB, ZF], 'Side', '50.5 × 30.5 × 1.5 cm', 'Stands in the corner. Its outer face carries the cable riser, hidden in the 6 cm gap to the side wall.'],
+  ['Deck', TX.deck, [Y.deck0, Y.deck1], [ZB, ZF], 'Deck', '79 × 30.5 × 1.5 cm at 18 cm', 'Max 5 kg per shelf. Its back edge doubles as the cable rail for the ZBT-2 lead.'],
+  ['Low end panel', TX.low, [0, Y.deck0], [ZB, ZF], 'Side', '16.5 × 30.5 × 1.5 cm', 'Closes the base at the low end, out in the room.'],
+  ['Centre rail', TX.rail, [Y.rail0, Y.deck0], [-0.75, 0.75], 'Rail', '77.5 × 9.5 × 1.5 cm, 7 cm above the floor', 'The power strip is screwed to its back face, so the rail hides the whole power deck from the room.'],
+  ['Divider', TX.div, [Y.deck1, Y.top0], [ZB, ZF], 'Divider', '32.5 × 30.5 × 1.5 cm', 'Separates the open niche from the two slots. Its back edge carries the ZBT-2 lead down to the deck.'],
+  ['Fin', TX.fin, [Y.deck1, Y.top0], [-0.75, 0.75], 'Fin', '9.5 × 32.5 × 1.5 cm', 'Stiffens the cantilevered top. It splits the inner part of the niche front and back.'],
+  ['Shelf', TX.shelf, [Y.shelf0, Y.shelf1], [ZB, ZF], 'Shelf', '53 × 30.5 × 1.5 cm at 38.5 cm', 'Max 5 kg. Above it the 10.5 cm upper slot, below it the 20.5 cm lower slot.'],
 ];
 const table = new THREE.Group();
 for (const [name, xs, ys, zs, , dims, info] of tableParts) {
@@ -447,35 +465,36 @@ for (const m of table.children) {
 }
 
 // ---------- devices ----------
-// FRITZ!Box 6660 Cable: 25.3 × 18.5 × 4.8 cm, centred in the upper slot, ports to the back.
-const FB = { cx: 52.5, y0: Y.shelf1, z0: -9.5, z1: 9.0, w: 25.3, h: 4.5 };
-const FBPORT = { fon: 42.6, usb: 45.2, lan4: 47.9, lan3: 49.7, lan2: 51.5, lan1: 53.3, lan25: 55.6, coax: 59.0, power: 62.6 };
+// FRITZ!Box 6660 Cable, lying flat: 25.3 × 18.5 × 4.8 cm. Lower slot, pushed against the tall end, ports to the wall.
+// The raw LAN cable from the floor-level hole has ~30 cm of reach, so the router has to sit as low and close to the corner as the table allows.
+const FB = { x0: 1.8, x1: 27.1, y0: Y.deck1, z0: -14.0, z1: 4.5, h: 4.5 };
+FB.cx = (FB.x0 + FB.x1) / 2;
+// Rear ports seen from behind, left to right: FON, LAN 2.5G, LAN 1 to 4, cable, power. With the ports facing the wall
+// that puts power and the cable port at the corner end, and LAN 4 is the nearest LAN port to the hole.
+const FBPORT = { power: 3.6, coax: 6.4, lan4: 9.4, lan3: 11.2, lan2: 13.0, lan1: 14.8, lan25: 17.4, fon: 21.3 };
 function makeFritz() {
   const g = new THREE.Group();
-  const D_ = FB.z1 - FB.z0;
-  const body = box(FB.w, FB.h, D_, MAT.fritz, 0.9); body.position.y = 0.3 + FB.h / 2; g.add(body);
+  const W = FB.x1 - FB.x0, D_ = FB.z1 - FB.z0;
+  const body = box(W, FB.h - 0.6, D_, MAT.fritz, 0.9); body.position.y = 0.3 + 0.6 + (FB.h - 0.6) / 2; g.add(body);
+  const base = box(W - 0.4, 0.9, D_ - 0.4, std(0x4a4d52, 0.5), 0.4); base.position.y = 0.3 + 0.45; g.add(base);
   const deco = canvasTexture(1024, 748, (c, w, h) => {
     c.clearRect(0, 0, w, h);
     c.fillStyle = 'rgba(160,160,158,0.55)';
-    for (let r = 0; r < 7; r++) for (let k = 0; k < 22; k++) {
-      const x = 120 + k * 36, y = 80 + r * 34; c.beginPath(); c.roundRect(x, y, 22, 9, 4); c.fill();
-    }
+    for (let r = 0; r < 7; r++) for (let k = 0; k < 22; k++) { c.beginPath(); c.roundRect(120 + k * 36, 80 + r * 34, 22, 9, 4); c.fill(); }
     c.fillStyle = '#e2001a';
     c.font = 'italic 800 88px "Helvetica Neue", Arial, sans-serif';
     c.fillText('FRITZ!', 70, h - 70);
   });
-  const top = new THREE.Mesh(new THREE.PlaneGeometry(FB.w - 1.9, D_ - 1.9), new THREE.MeshStandardMaterial({ map: deco, transparent: true, roughness: 0.4 }));
+  const top = new THREE.Mesh(new THREE.PlaneGeometry(W - 1.9, D_ - 1.9), new THREE.MeshStandardMaterial({ map: deco, transparent: true, roughness: 0.4 }));
   top.rotation.x = -Math.PI / 2; top.position.y = 0.3 + FB.h + 0.012; g.add(top);
   for (const [fx, fz] of [[-10.5, -7.5], [10.5, -7.5], [-10.5, 7.5], [10.5, 7.5]]) {
     const f = new THREE.Mesh(new THREE.CylinderGeometry(0.7, 0.7, 0.3, 16), MAT.black); f.position.set(fx, 0.15, fz); g.add(f);
   }
-  const leds = [MAT.ledG, MAT.ledG, MAT.ledG, MAT.ledG, MAT.ledG];
-  leds.forEach((m, i) => { const l = box(0.9, 0.18, 0.1, m); l.position.set(-7.8 + i * 1.6, 0.3 + FB.h - 0.9, D_ / 2 + 0.02); g.add(l); });
+  for (let i = 0; i < 5; i++) { const l = box(0.9, 0.18, 0.1, MAT.ledG); l.position.set(-7.8 + i * 1.6, 0.3 + FB.h - 0.9, D_ / 2 + 0.02); g.add(l); }
   const rz = -D_ / 2 - 0.03;
   for (const [k, px] of Object.entries(FBPORT)) {
     const x = px - FB.cx;
-    if (k.startsWith('lan')) { const p = box(1.5, 1.25, 0.1, MAT.portDark); p.position.set(x, 1.9, rz); g.add(p); }
-    else if (k === 'usb') { const p = box(1.3, 0.6, 0.1, MAT.portBlue); p.position.set(x, 1.9, rz); g.add(p); }
+    if (k.startsWith('lan')) { const p = box(1.5, 1.25, 0.1, k === 'lan25' ? MAT.portDark : std(0xe8c63a, 0.5)); p.position.set(x, 1.9, rz); g.add(p); }
     else if (k === 'fon') { const p = box(1.1, 0.9, 0.1, MAT.portDark); p.position.set(x, 1.9, rz); g.add(p); }
     else if (k === 'coax') { const p = new THREE.Mesh(new THREE.CylinderGeometry(0.48, 0.48, 1.0, 20), MAT.metal); p.rotation.x = Math.PI / 2; p.position.set(x, 2.2, rz - 0.4); g.add(p); }
     else if (k === 'power') { const p = new THREE.Mesh(new THREE.CylinderGeometry(0.45, 0.45, 0.2, 20), MAT.portDark); p.rotation.x = Math.PI / 2; p.position.set(x, 1.9, rz); g.add(p); }
@@ -483,45 +502,59 @@ function makeFritz() {
   g.position.set(FB.cx, FB.y0, (FB.z0 + FB.z1) / 2);
   return g;
 }
-const fritz = addItem(makeFritz(), { name: 'FRITZ!Box 6660 Cable', dims: '25.3 × 18.5 × 4.8 cm', info: 'Centred in the upper slot. Antennas sit 42 cm above the floor with only 1.5 cm of particleboard on top, which barely dents WiFi. The slot is open front and back, so warm air leaves on both sides.', step: 3 });
+const fritz = addItem(makeFritz(), { name: 'FRITZ!Box 6660 Cable', dims: '25.3 × 18.5 × 4.8 cm, lying flat', info: 'Lower slot, against the tall end in the corner, back edge 1.25 cm in from the back of the table. Power and the cable port sit at that end, and LAN 4 is within reach of the 30 cm wall cable. The upper slot would need about 50 cm. 15 cm of air above it, open front and back.', step: 3 });
 
-// Raspberry Pi 5 in the official case. Ports face back; the USB-C power port is on the right flank near the front.
-const PI = { w: 6.3, l: 9.4, h: 3.1 }, LINE_Z = 9.0;
-function makePi() {
+// Raspberry Pi 4B in Geekworm P173 aluminium cases (9 × 6.5 × 3.3 cm). Ports face back: Ethernet, USB 3 (blue), USB 2 from the left.
+// USB-C power is on the right flank near the front.
+const PI = { w: 6.5, l: 9.0, h: 3.3 }, LINE_Z = 9.0;
+function makePi(color) {
   const g = new THREE.Group();
-  const base = box(PI.w, 1.6, PI.l, MAT.piRed, 0.35); base.position.y = 0.8; g.add(base);
-  const lid = box(PI.w, 1.5, PI.l, MAT.piWhite, 0.35); lid.position.y = 2.35; g.add(lid);
-  const fan = new THREE.Mesh(new THREE.CylinderGeometry(1.75, 1.75, 0.05, 40), MAT.fan); fan.position.set(0, 3.11, 0.4); g.add(fan);
-  const hub = new THREE.Mesh(new THREE.CylinderGeometry(0.6, 0.6, 0.07, 24), MAT.piWhite); hub.position.set(0, 3.13, 0.4); g.add(hub);
+  const alu = std(color, 0.42, 0.65);
+  const base = box(PI.w, 1.6, PI.l, alu, 0.3); base.position.y = 0.8; g.add(base);
+  const lid = box(PI.w, 1.0, PI.l, alu, 0.3); lid.position.y = 2.1; g.add(lid);
+  for (let i = 0; i < 9; i++) { const fin = box(0.28, 0.7, PI.l - 0.6, alu, 0.1); fin.position.set(-PI.w / 2 + 0.45 + i * 0.7, 2.95, 0); g.add(fin); }
   const rz = -PI.l / 2 - 0.04;
-  const usb2 = box(1.35, 1.6, 0.1, MAT.portDark); usb2.position.set(-2.15, 1.45, rz); g.add(usb2);
-  const usb3 = box(1.35, 1.6, 0.1, MAT.portBlue); usb3.position.set(-0.35, 1.45, rz); g.add(usb3);
-  const eth = box(1.6, 1.35, 0.1, MAT.metal); eth.position.set(1.9, 1.35, rz); g.add(eth);
+  const eth = box(1.6, 1.35, 0.1, MAT.metal); eth.position.set(-PI.w / 2 + 1.5, 1.3, rz); g.add(eth);
+  const usb3 = box(1.35, 1.6, 0.1, MAT.portBlue); usb3.position.set(-PI.w / 2 + 3.35, 1.4, rz); g.add(usb3);
+  const usb2 = box(1.35, 1.6, 0.1, MAT.portDark); usb2.position.set(-PI.w / 2 + 5.15, 1.4, rz); g.add(usb2);
   const usbc = box(0.1, 0.35, 0.9, MAT.portDark); usbc.position.set(PI.w / 2 + 0.04, 1.0, PI.l / 2 - 1.4); g.add(usbc);
   const led = box(0.25, 0.25, 0.08, MAT.ledG); led.position.set(-2.2, 1.0, PI.l / 2 + 0.03); g.add(led);
   return g;
 }
+// SSD enclosure standing on its long edge like a book: 1.4 wide, 8 tall, 12.6 deep. Port at the rear, mid-height.
 function makeSSD() {
   const g = new THREE.Group();
-  const b = box(8, 1.4, 12.6, MAT.ssd, 0.4); b.position.y = 0.7; g.add(b);
-  const led = box(0.4, 0.18, 0.06, MAT.ledB); led.position.set(2.8, 0.7, 6.31); g.add(led);
-  const port = box(0.95, 0.4, 0.08, MAT.portDark); port.position.set(0, 0.7, -6.32); g.add(port);
+  const b = box(1.4, 8, 12.6, MAT.ssd, 0.35); b.position.y = 4; g.add(b);
+  const led = box(0.06, 0.4, 0.18, MAT.ledB); led.position.set(0, 7.2, 6.31); led.rotation.y = Math.PI / 2; g.add(led);
   return g;
 }
-// Lower slot, left to right: SSD A, Pi A (Home Assistant), SSD B, Pi B (server). Fronts on one line.
-const LS = { y: Y.deck1 };
-const SSDA = { x0: 33.95 }, PIA = { x0: 43.95 }, SSDB = { x0: 54.75 }, PIB = { x0: 64.75 };
-const piPorts = p => ({ usb2: p.x0 + 1.0, usb3: p.x0 + 2.8, eth: p.x0 + 5.2, usbcX: p.x0 + PI.w, usbcZ: LINE_Z - 1.4, rear: LINE_Z - PI.l });
+// Upper slot, left to right: four SSDs on edge with the powered hub behind them, Pi 4 (server), Pi 4 (Home Assistant).
+const US = { y: Y.shelf1 };
+const PIB = { x0: 24 }, PIA = { x0: 35.5 };
+const BOOKS = [11.5, 13.5, 15.5, 17.5].map(x => x + 0.7);   // SSD centres
+const HUB = { x0: 10.7, x1: 19.7, z0: -9.9, z1: -6.9, h: 2.0 };
+HUB.z = (HUB.z0 + HUB.z1) / 2;
+const piPorts = p => ({ eth: p.x0 + 1.5, usb3: p.x0 + 3.35, usb2: p.x0 + 5.15, usbcX: p.x0 + PI.w, usbcZ: LINE_Z - 1.4, rear: LINE_Z - PI.l });
 const PA = piPorts(PIA), PB = piPorts(PIB);
 const SSD_REAR = LINE_Z - 12.6;
 function place(obj, x, y, z) { obj.position.set(x, y, z); return obj; }
-const ssdA = addItem(place(makeSSD(), SSDA.x0 + 4, LS.y, LINE_Z - 6.3), { name: 'SSD A', dims: '12.6 × 8 × 1.4 cm, USB 3', info: 'Home Assistant storage. Sits left of its Pi because the Pi 5 USB 3 ports are on the left half of the rear panel, so the lead stays 20 cm short.', step: 4 });
-const piA = addItem(place(makePi(), PIA.x0 + PI.w / 2, LS.y, LINE_Z - PI.l / 2), { name: 'Raspberry Pi 5 · Home Assistant', dims: '9.4 × 6.3 × 3.1 cm', info: 'Leftmost Pi, closest to the ZBT-2. LAN from FRITZ!Box LAN 1. Zigbee stick on a USB 2.0 port (black), SSD on USB 3 (blue).', step: 4 });
-const ssdB = addItem(place(makeSSD(), SSDB.x0 + 4, LS.y, LINE_Z - 6.3), { name: 'SSD B', dims: '12.6 × 8 × 1.4 cm, USB 3', info: 'Server storage, left of its Pi for the same reason as SSD A.', step: 4 });
-const piB = addItem(place(makePi(), PIB.x0 + PI.w / 2, LS.y, LINE_Z - PI.l / 2), { name: 'Raspberry Pi 5 · Server', dims: '9.4 × 6.3 × 3.1 cm', info: 'Rightmost device, nearest the riser. LAN from FRITZ!Box LAN 2.', step: 4 });
+const piA = addItem(place(makePi(0x9b1b2a), PIA.x0 + PI.w / 2, US.y, LINE_Z - PI.l / 2), { name: 'Raspberry Pi 4 · Home Assistant', dims: 'Geekworm P173, 9 × 6.5 × 3.3 cm', info: 'Rightmost, closest to the ZBT-2. LAN from FRITZ!Box LAN 1, ZBT-2 on a black USB 2.0 port. Boots from its own card, so no SSD. Red case assumed for this one.', step: 4 });
+const piB = addItem(place(makePi(0x26282c), PIB.x0 + PI.w / 2, US.y, LINE_Z - PI.l / 2), { name: 'Raspberry Pi 4 · Server', dims: 'Geekworm P173, 9 × 6.5 × 3.3 cm', info: 'LAN from FRITZ!Box LAN 2. One blue USB 3 port feeds the powered hub on its left, which carries all four SSDs.', step: 4 });
+const ssds = BOOKS.map((x, i) => addItem(place(makeSSD(), x, US.y, LINE_Z - 6.3), { name: `SSD ${i + 1}`, dims: '12.6 × 8 × 1.4 cm, standing on edge', info: 'Stood up like books with 6 mm gaps, so air rises between them. Each one plugs into a port on top of the hub behind it.', step: 4 }));
+function makeHub() {
+  const g = new THREE.Group();
+  const b = boxAt([HUB.x0, HUB.x1], [0, HUB.h], [HUB.z0, HUB.z1], std(0x1c1d20, 0.45), 0.35); g.add(b);
+  for (const x of BOOKS) {
+    const p = boxAt([x - 0.65, x + 0.65], [HUB.h - 0.02, HUB.h + 0.04], [HUB.z - 0.32, HUB.z + 0.32], MAT.portDark); g.add(p);
+    const led = boxAt([x - 0.15, x + 0.15], [HUB.h - 0.02, HUB.h + 0.06], [HUB.z1 - 0.5, HUB.z1 - 0.2], MAT.ledB); g.add(led);
+  }
+  g.position.y = US.y;
+  return g;
+}
+const hub = addItem(makeHub(), { name: 'Powered USB 3 hub', dims: '9 × 3 × 2 cm, ports on top', info: 'Your hub, behind the SSDs. Power enters at the left end from the riser, the upstream lead from the server Pi at the right end. A Pi 4 can only supply 1.2 A over USB, so four SSDs need the hub\'s own supply.', step: 4 });
 
 // Home Assistant Connect ZBT-2: 8.3 × 8.3 base, 17.9 cm tall with the antenna.
-const ZB2 = { x: 7.5, z: 0, y: Y.deck1 };
+const ZB2 = { x: L - 7.5, z: 0, y: Y.deck1 };
 function makeZBT() {
   const g = new THREE.Group();
   const base = box(8.3, 1.5, 8.3, MAT.zbt, 1.1); base.position.y = 0.75; g.add(base);
@@ -530,50 +563,49 @@ function makeZBT() {
   const cap = new THREE.Mesh(new THREE.SphereGeometry(1.2, 32, 16, 0, Math.PI * 2, 0, Math.PI / 2), MAT.zbt); cap.position.y = 16.7; g.add(cap);
   const led = box(0.6, 0.15, 0.06, MAT.ledB); led.position.set(0, 0.55, 4.16); g.add(led);
   const port = box(0.95, 0.4, 0.08, MAT.portDark); port.position.set(0, 0.75, -4.18); g.add(port);
-  for (const o of g.children) o.castShadow = true;
   return g;
 }
-const zbt = addItem(place(makeZBT(), ZB2.x, ZB2.y, ZB2.z), { name: 'Home Assistant Connect ZBT-2', dims: '8.3 × 8.3 × 17.9 cm', info: 'Free-standing in the open niche at the low end: furthest point from the FRITZ!Box WiFi and the USB 3 SSDs, with open air on three sides and 14.6 cm of headroom.', step: 6 });
+const zbt = addItem(place(makeZBT(), ZB2.x, ZB2.y, ZB2.z), { name: 'Home Assistant Connect ZBT-2', dims: '8.3 × 8.3 × 17.9 cm', info: 'Free-standing in the open niche at the room end, the furthest point on the table from the router WiFi, the hub and the SSDs, with open air on three sides.', step: 6 });
 
 // Power deck: 5-way strip on the back face of the centre rail, sockets facing the wall.
-const STRIP = { x0: 43, x1: 77, y: 11.25, z0: -4.75, z1: -0.75 };
-const SOCK = [46.5, 52.5, 58.5, 64.5, 70.5];
+const STRIP = { x0: 3.5, x1: 37.5, y: 11.25, z0: -4.75, z1: -0.75 };
+const SOCK = [10, 16, 22, 28, 34];          // socket 1 is nearest the corner
 const PSU_END = -10.65;
 function makeStrip() {
   const g = new THREE.Group();
-  const b = boxAt([STRIP.x0, STRIP.x1], [STRIP.y - 2.75, STRIP.y + 2.75], [STRIP.z0, STRIP.z1], MAT.black, 0.5); g.add(b);
+  g.add(boxAt([STRIP.x0, STRIP.x1], [STRIP.y - 2.75, STRIP.y + 2.75], [STRIP.z0, STRIP.z1], MAT.black, 0.5));
   for (const sx of SOCK) {
     const s = new THREE.Mesh(new THREE.CylinderGeometry(1.95, 1.95, 0.2, 32), std(0x2a2b2f, 0.7)); s.rotation.x = Math.PI / 2; s.position.set(sx, STRIP.y, STRIP.z0 - 0.06); g.add(s);
   }
-  const sw = boxAt([73.5, 75.9], [STRIP.y - 1.0, STRIP.y + 1.0], [STRIP.z0 - 0.35, STRIP.z0], MAT.ledO, 0.2); g.add(sw);
+  g.add(boxAt([35.1, 37.0], [STRIP.y - 1.0, STRIP.y + 1.0], [STRIP.z0 - 0.35, STRIP.z0], MAT.ledO, 0.2));
   return g;
 }
-addItem(makeStrip(), { name: 'Power strip, 5-way with switch', dims: '34 × 5.5 × 4 cm', info: 'Two short screws through its keyhole slots into the back face of the centre rail. Sockets face the wall, so the plugged-in supplies point away from the room. Sockets 1, 3 and 5 in use, 2 and 4 spare. The right end sits 2 cm from the tall end panel, closest to the riser.', step: 2 });
-function makePSU(w, h, len, label) {
+addItem(makeStrip(), { name: 'Power strip, 5-way with switch', dims: '34 × 5.5 × 4 cm', info: 'Two short screws through its keyhole slots into the back face of the centre rail. Sockets face the wall, so the supplies point away from the room. Socket 3 stays free.', step: 2 });
+function makePSU(w, h, len) {
   const g = new THREE.Group();
   const b = box(w, h, len, MAT.psu, 0.45); b.position.set(0, 0, -len / 2); g.add(b);
   return g;
 }
-const psuA = addItem(place(makePSU(4.4, 5.4, 5.6), SOCK[4], STRIP.y, STRIP.z0 - 0.3), { name: 'Pi 5 PSU (27 W) · Home Assistant', dims: '5.6 × 5.4 × 4.4 cm, 1.2 m lead', info: 'Socket 5, nearest the riser, because Pi A is the furthest Pi from it. Its fixed USB-C lead runs under the deck to the riser, up one storey and along the deck to Pi A.', step: 2 });
-const psuB = addItem(place(makePSU(4.4, 5.4, 5.6), SOCK[2], STRIP.y, STRIP.z0 - 0.3), { name: 'Pi 5 PSU (27 W) · Server', dims: '5.6 × 5.4 × 4.4 cm, 1.2 m lead', info: 'Socket 3. Same route as the Home Assistant supply.', step: 2 });
-const psuF = addItem(place(makePSU(5.0, 6.0, 5.6), SOCK[0], STRIP.y, STRIP.z0 - 0.3), { name: 'FRITZ!Box power supply', dims: '5.6 × 6 × 5 cm', info: 'Socket 1. DC lead runs under the deck, up the riser and along the back of the upper slot.', step: 2 });
+const psuF = addItem(place(makePSU(5.0, 6.0, 5.6), SOCK[0], STRIP.y, STRIP.z0 - 0.3), { name: 'FRITZ!Box power supply', dims: '5.6 × 6 × 5 cm', info: 'Socket 1, nearest the corner and the router\'s power jack. The lead goes straight up behind the deck.', step: 2 });
+const psuH = addItem(place(makePSU(4.2, 5.2, 5.0), SOCK[1], STRIP.y, STRIP.z0 - 0.3), { name: 'USB hub power supply', dims: '5 × 5.2 × 4.2 cm', info: 'Socket 2. Its lead climbs the riser to the hub in the upper slot.', step: 2 });
+const psuB = addItem(place(makePSU(4.4, 5.4, 5.6), SOCK[3], STRIP.y, STRIP.z0 - 0.3), { name: 'Pi 4 PSU (15.3 W) · Server', dims: '5.6 × 5.4 × 4.4 cm, 1.5 m lead', info: 'Socket 4.', step: 2 });
+const psuA = addItem(place(makePSU(4.4, 5.4, 5.6), SOCK[4], STRIP.y, STRIP.z0 - 0.3), { name: 'Pi 4 PSU (15.3 W) · Home Assistant', dims: '5.6 × 5.4 × 4.4 cm, 1.5 m lead', info: 'Socket 5.', step: 2 });
 
 // TRIXIG box in the free front bay, holding the spares.
 {
   const g = new THREE.Group();
-  const b = boxAt([5, 24], [0, 4], [1.0, 15.0], std(0xc9ced3, 0.35, 0, { transparent: true, opacity: 0.72 }), 0.4); g.add(b);
-  const lidm = boxAt([5.2, 23.8], [3.9, 4.05], [1.2, 14.8], std(0xd7d9dc, 0.3, 0, { transparent: true, opacity: 0.6 })); g.add(lidm);
+  g.add(boxAt([56.5, 75.5], [0, 4], [1.0, 15.0], std(0xc9ced3, 0.35, 0, { transparent: true, opacity: 0.72 }), 0.4));
+  g.add(boxAt([56.7, 75.3], [3.9, 4.05], [1.2, 14.8], std(0xd7d9dc, 0.3, 0, { transparent: true, opacity: 0.6 })));
   addItem(g, { name: 'TRIXIG box', dims: '19 × 14 × 4 cm', info: 'Spare holders and clips live in the free front bay under the deck.', step: 7 });
 }
 
 // ---------- cables ----------
 const R = { eth: 0.2, usbc: 0.2, usb3: 0.22, usbz: 0.22, coax: 0.34, dc: 0.18, mains: 0.32 };
-const OUT = L + 0.2;                       // outer face of the tall end panel, plus holder base
-const ox = r => OUT + r;
-const onShelf = r => Y.shelf1 + 0.2 + r;   // lying in a holder on the shelf
+const ox = r => -(0.2 + r);                // outer face of the tall end, in holders
+const onShelf = r => Y.shelf1 + 0.2 + r;
 const onDeck = r => Y.deck1 + 0.2 + r;
 const underDeck = r => Y.deck0 - 0.2 - r;
-const deckEdgeZ = r => ZB - 0.2 - r;
+const edgeZ = r => ZB - 0.2 - r;            // in holders on a back edge
 
 function roundedPath(pts, rad = 1.2) {
   const path = new THREE.CurvePath();
@@ -609,7 +641,7 @@ function plugMesh(type, from, to) {
   m.position.copy(from).add(to).multiplyScalar(0.5); m.castShadow = true; return m;
 }
 const cables = [];
-const NORMALS = { up: V(0, 1, 0), down: V(0, -1, 0), back: V(0, 0, -1), right: V(1, 0, 0) };
+const NORMALS = { up: V(0, 1, 0), down: V(0, -1, 0), back: V(0, 0, -1), left: V(-1, 0, 0) };
 function nearestDir(pts, p) {
   let best = 1e9, dir = V(1, 0, 0);
   for (let i = 0; i < pts.length - 1; i++) {
@@ -628,10 +660,6 @@ function makeClip(p, nKey, along, r, nail) {
   shell.matrix.makeBasis(across, n, along); shell.matrixAutoUpdate = false;
   shell.matrix.setPosition(base.clone().addScaledVector(n, hgt / 2));
   g.add(shell);
-  if (nail) {
-    const head = new THREE.Mesh(new THREE.CylinderGeometry(0.16, 0.16, 0.05, 12), MAT.metal);
-    head.quaternion.setFromUnitVectors(V(0, 1, 0), n); head.position.copy(base).addScaledVector(n, hgt + 0.02); g.add(head);
-  }
   clipCount[nail ? 'nail' : 'holder']++;
   return g;
 }
@@ -647,87 +675,100 @@ function addCable(c) {
   if (c.plugB) g.add(plugMesh(c.plugB, c.pts[c.pts.length - 1], c.pts[c.pts.length - 2]));
   addItem(g, { name: c.name, dims: `${(c.length / 100).toFixed(2)} m routed`, info: c.info, step: c.step, cable: c, sharedMat: true });
   c.tube = tube; c.group = g;
-  c.clipObjs = [];
   for (const [x, y, z, nKey, nail] of (c.clips || [])) {
     const p = V(x, y, z); const along = nearestDir(c.pts, p);
-    const clip = makeClip(p, nKey, along, R[c.kind], !!nail);
-    addItem(clip, { name: nail ? 'TRIXIG nail clip' : 'TRIXIG adhesive holder', dims: nail ? 'for 7 to 10 mm cable' : '16 × 12 × 8 mm', info: `Holds the ${c.short}.`, step: 7 });
-    c.clipObjs.push(clip);
+    addItem(makeClip(p, nKey, along, R[c.kind], !!nail), { name: nail ? 'TRIXIG nail clip' : 'TRIXIG adhesive holder', dims: nail ? 'for 7 to 10 mm cable' : '16 × 12 × 8 mm', info: `Holds the ${c.short}.`, step: 7 });
   }
   cables.push(c);
   return c;
 }
 
-// Riser: the outer face of the tall end panel, 1 to 3.5 cm in from the back corner. Lanes run front to back.
-const RZ = { lanB: -14.7, lanA: -14.1, usbcA: -13.5, usbcB: -12.9, dc: -12.3 };
-const UZ = { lanB: -14.7, lanA: -14.1, coax: -13.5, dc: -12.9 };            // shelf lanes behind the router
-const DZ = { lanA: -14.6, usbcA: -13.8, lanB: -13.0, usbcB: -12.2 };         // deck lanes behind the Pis
-const UD = { dc: -13.6, usbcB: -12.8, usbcA: -12.0 };                         // lanes under the deck
-const FBY = FB.y0 + 0.3 + 1.6;                                                // router port height
+// Riser: outer face of the tall end, 0.5 to 3 cm in from the back corner, inside the 6 cm gap to the side wall.
+// Lanes front to back; each cable turns into the upper slot at its own height.
+const RZ = { lanA: -14.7, lanB: -14.1, usbcB: -13.5, hub: -12.9 };
+const RISER = ['lanA', 'lanB', 'usbcB', 'hub'];
+const topTurn = id => { const k = RISER.indexOf(id); return { y: 41.0 + 0.6 * k, z: -15.95 - 0.55 * k }; };
+const UZ = { lanA: -14.7, usbcB: -14.1, lanB: -13.5, hub: -12.9, usbcA: -13.5 };   // upper slot lanes, furthest destination at the back
+const UD = { usbcA: -13.6, usbcB: -12.8, hub: -12.0 };                              // under the deck
+const DIVX = TX.div[1] - 0.35, USBC_DIV = TX.div[0] + 0.35;                          // two leads side by side on the divider's back edge
+const FBY = FB.y0 + 0.3 + 1.6;                                                      // router port height
+const riserUp = (id, r, yFrom) => {
+  const t = topTurn(id);
+  return [[ox(r), yFrom, RZ[id]], [ox(r), t.y, RZ[id]], [ox(r), t.y, t.z], [2.3, t.y, t.z], [3.5, onShelf(r), UZ[id]]];
+};
+const fromBase = (id, r, sx, yB) => {
+  const k = RISER.indexOf(id); const zb = -15.95 - 0.55 * k;
+  return [[sx, STRIP.y, PSU_END], [sx, STRIP.y, UD[id]], [sx, underDeck(r), UD[id]], [4.3, underDeck(r), UD[id]], [2.9, yB, zb], [ox(r), yB, zb]];
+};
 
-addCable({ id: 'lanA', kind: 'eth', short: 'LAN lead to the Home Assistant Pi', name: 'LAN · FRITZ!Box LAN 1 → Pi A', real: 0x1d1e21, code: 0x2f6bff, step: 5, plugA: 'rj45', plugB: 'rj45',
-  info: 'Slim Cat 6a. Back along the upper slot, around the back corner, down the riser, along the deck to Pi A.', use: 'Slim Cat 6a patch, 1.5 m',
-  pts: [[FBPORT.lan1, FBY, FB.z0], [FBPORT.lan1, FBY, FB.z0 - 2.6], [FBPORT.lan1, onShelf(R.eth), UZ.lanA], [77, onShelf(R.eth), UZ.lanA], [78.2, 41.0, -15.95], [ox(R.eth), 41.0, -15.95], [ox(R.eth), 41.0, RZ.lanA], [ox(R.eth), 19.7, RZ.lanA], [ox(R.eth), 19.7, -16.1], [78.2, 19.7, -16.1], [77, onDeck(R.eth), DZ.lanA], [PA.eth, onDeck(R.eth), DZ.lanA], [PA.eth, onDeck(R.eth), PA.rear - 5], [PA.eth, LS.y + 1.35, PA.rear - 2.6], [PA.eth, LS.y + 1.35, PA.rear]],
-  clips: [[62, onShelf(R.eth), UZ.lanA, 'up'], [72, onShelf(R.eth), UZ.lanA, 'up'], [ox(R.eth), 26, RZ.lanA, 'right'], [ox(R.eth), 34, RZ.lanA, 'right'], [56, onDeck(R.eth), DZ.lanA, 'up'], [67, onDeck(R.eth), DZ.lanA, 'up']] });
+addCable({ id: 'hole', kind: 'eth', short: 'LAN cable from the wall', name: 'LAN · wall hole → FRITZ!Box LAN 4', real: 0xf1d64a, code: 0x2f6bff, step: 3, plugA: null, plugB: 'rj45',
+  info: 'The raw cable from the hole: up in the corner, across behind the tall end and into LAN 4, the LAN port nearest the corner.', use: 'Your 30 cm cable from the hole', fixedLen: 30,
+  pts: [[HOLE.x, HOLE.y, WALL + 0.05], [HOLE.x, HOLE.y, -17.8], [HOLE.x, 15.6, -17.8], [FBPORT.lan4, 18.6, -17.8], [FBPORT.lan4, FBY, FB.z0 - 2.6], [FBPORT.lan4, FBY, FB.z0]] });
 
-addCable({ id: 'lanB', kind: 'eth', short: 'LAN lead to the server Pi', name: 'LAN · FRITZ!Box LAN 2 → Pi B', real: 0x1d1e21, code: 0x00a3c4, step: 5, plugA: 'rj45', plugB: 'rj45',
-  info: 'Slim Cat 6a, same route as LAN 1 with its own lane.', use: 'Slim Cat 6a patch, 1 m',
-  pts: [[FBPORT.lan2, FBY, FB.z0], [FBPORT.lan2, FBY, FB.z0 - 2.6], [FBPORT.lan2, onShelf(R.eth), UZ.lanB], [77, onShelf(R.eth), UZ.lanB], [78.2, 41.6, -16.5], [ox(R.eth), 41.6, -16.5], [ox(R.eth), 41.6, RZ.lanB], [ox(R.eth), 20.3, RZ.lanB], [ox(R.eth), 20.3, -16.7], [78.2, 20.3, -16.7], [77, onDeck(R.eth), DZ.lanB], [PB.eth, onDeck(R.eth), DZ.lanB], [PB.eth, onDeck(R.eth), PB.rear - 5], [PB.eth, LS.y + 1.35, PB.rear - 2.6], [PB.eth, LS.y + 1.35, PB.rear]],
-  clips: [[60, onShelf(R.eth), UZ.lanB, 'up'], [70, onShelf(R.eth), UZ.lanB, 'up'], [ox(R.eth), 27, RZ.lanB, 'right'], [ox(R.eth), 35, RZ.lanB, 'right'], [74, onDeck(R.eth), DZ.lanB, 'up']] });
+addCable({ id: 'coax', kind: 'coax', short: 'coax lead', name: 'Coax · side wall → FRITZ!Box', real: 0xf1f1ee, code: 0xff6a3d, step: 3, plugA: 'iec', plugB: 'fconn',
+  info: 'From the side wall outlet down into the corner gap, round behind the tall end and into the cable port.', use: 'Supplied coax, about 0.4 m',
+  pts: [[SIDE + 1.1, COAX.y, COAX.z], [SIDE + 3.6, COAX.y, COAX.z], [SIDE + 3.6, 20.6, COAX.z - 1.5], [SIDE + 3.6, 20.6, -18.6], [FBPORT.coax, 20.6, -18.6], [FBPORT.coax, FBY + 0.3, FB.z0 - 2.6], [FBPORT.coax, FBY + 0.3, FB.z0 - 0.4]] });
 
 addCable({ id: 'dc', kind: 'dc', short: 'FRITZ!Box power lead', name: 'Power · FRITZ!Box', real: 0x1d1e21, code: 0xf2b705, step: 3, plugA: null, plugB: 'dc',
-  info: 'From socket 1 under the deck, up the riser to the upper slot, into the power jack.', use: 'Supplied PSU lead',
-  pts: [[SOCK[0], STRIP.y, PSU_END], [SOCK[0], STRIP.y, UD.dc], [SOCK[0], underDeck(R.dc), UD.dc], [76.2, underDeck(R.dc), UD.dc], [77.6, 12.2, -17.1], [ox(R.dc), 12.2, -17.1], [ox(R.dc), 12.2, RZ.dc], [ox(R.dc), 42.4, RZ.dc], [ox(R.dc), 42.4, -17.1], [78.2, 42.4, -17.1], [77, onShelf(R.dc), UZ.dc], [FBPORT.power, onShelf(R.dc), UZ.dc], [FBPORT.power, FBY, FB.z0 - 2.0], [FBPORT.power, FBY, FB.z0]],
-  clips: [[56, underDeck(R.dc), UD.dc, 'down'], [68, underDeck(R.dc), UD.dc, 'down'], [ox(R.dc), 16, RZ.dc, 'right'], [ox(R.dc), 30, RZ.dc, 'right'], [70, onShelf(R.dc), UZ.dc, 'up']] });
+  info: 'From socket 1, up behind the deck into the power jack at the corner end. Hidden behind the router.', use: 'Supplied PSU lead',
+  pts: [[SOCK[0], STRIP.y, PSU_END], [SOCK[0], STRIP.y, -13.2], [5.2, STRIP.y, -16.4], [5.2, 18.6, -16.4], [FBPORT.power, FBY, FB.z0 - 2.0], [FBPORT.power, FBY, FB.z0]] });
 
-addCable({ id: 'coax', kind: 'coax', short: 'coax lead', name: 'Coax · wall outlet → FRITZ!Box', real: 0xf1f1ee, code: 0xff6a3d, step: 3, plugA: 'fconn', plugB: 'fconn',
-  info: 'From the multimedia outlet "Data" port up beside the tall end, across behind it above the riser, over the back edge of the shelf, into the cable port.', use: 'Supplied coax, F to F',
-  pts: [[COAX.x, COAX.y, WALL + 1.2], [COAX.x, COAX.y, WALL + 3.4], [COAX.x, COAX.y + 2.6, -17.6], [COAX.x, 43.6, -17.6], [78.2, 43.6, -17.6], [76.2, onShelf(R.coax), UZ.coax], [FBPORT.coax, onShelf(R.coax), UZ.coax], [FBPORT.coax, FBY + 0.3, FB.z0 - 2.2], [FBPORT.coax, FBY + 0.3, FB.z0 - 0.4]],
-  clips: [[68, onShelf(R.coax), UZ.coax, 'up', true]] });
+addCable({ id: 'lanA', kind: 'eth', short: 'LAN lead to the Home Assistant Pi', name: 'LAN · FRITZ!Box LAN 1 → Pi A', real: 0x1d1e21, code: 0x00a3c4, step: 5, plugA: 'rj45', plugB: 'rj45',
+  info: 'Slim Cat 6a. Behind the router to the corner, up the riser, along the back of the upper slot to the Home Assistant Pi.', use: 'Slim Cat 6a patch',
+  pts: [[FBPORT.lan1, FBY, FB.z0], [FBPORT.lan1, FBY, FB.z0 - 2.6], [FBPORT.lan1, 22.5, -16.6], [ox(R.eth), 22.5, -16.6], ...riserUp('lanA', R.eth, 22.5), [PA.eth, onShelf(R.eth), UZ.lanA], [PA.eth, onShelf(R.eth), PA.rear - 5], [PA.eth, US.y + 1.3, PA.rear - 2.6], [PA.eth, US.y + 1.3, PA.rear]],
+  clips: [[ox(R.eth), 29, RZ.lanA, 'left'], [ox(R.eth), 36, RZ.lanA, 'left'], [12, onShelf(R.eth), UZ.lanA, 'up'], [30, onShelf(R.eth), UZ.lanA, 'up']] });
+
+addCable({ id: 'lanB', kind: 'eth', short: 'LAN lead to the server Pi', name: 'LAN · FRITZ!Box LAN 2 → Pi B', real: 0x1d1e21, code: 0x7a5cff, step: 5, plugA: 'rj45', plugB: 'rj45',
+  info: 'Slim Cat 6a, same route as LAN 1 in its own lane.', use: 'Slim Cat 6a patch',
+  pts: [[FBPORT.lan2, FBY, FB.z0], [FBPORT.lan2, FBY, FB.z0 - 2.6], [FBPORT.lan2, 23.1, -17.2], [ox(R.eth), 23.1, -17.2], ...riserUp('lanB', R.eth, 23.1), [PB.eth, onShelf(R.eth), UZ.lanB], [PB.eth, onShelf(R.eth), PB.rear - 5], [PB.eth, US.y + 1.3, PB.rear - 2.6], [PB.eth, US.y + 1.3, PB.rear]],
+  clips: [[ox(R.eth), 31, RZ.lanB, 'left'], [ox(R.eth), 38, RZ.lanB, 'left'], [22, onShelf(R.eth), UZ.lanB, 'up']] });
 
 addCable({ id: 'usbcA', kind: 'usbc', short: 'Home Assistant Pi power lead', name: 'Power · PSU → Pi A (USB-C)', real: 0x1d1e21, code: 0xb04cff, step: 5, plugA: null, plugB: 'usbc',
-  info: 'Fixed 1.2 m lead of the official PSU. Under the deck, up one storey on the riser, along the deck and up the right flank of Pi A.', use: 'PSU lead 1.2 m', fixedLen: 120,
-  pts: [[SOCK[4], STRIP.y, PSU_END], [SOCK[4], STRIP.y, UD.usbcA], [SOCK[4], underDeck(R.usbc), UD.usbcA], [76.2, underDeck(R.usbc), UD.usbcA], [77.6, 14.2, -15.95], [ox(R.usbc), 14.2, -15.95], [ox(R.usbc), 14.2, RZ.usbcA], [ox(R.usbc), 18.9, RZ.usbcA], [ox(R.usbc), 18.9, -15.5], [78.2, 18.9, -15.5], [77, onDeck(R.usbc), DZ.usbcA], [PA.usbcX + 2.7, onDeck(R.usbc), DZ.usbcA], [PA.usbcX + 2.7, onDeck(R.usbc), PA.usbcZ - 1.6], [PA.usbcX + 2.2, LS.y + 1.0, PA.usbcZ], [PA.usbcX, LS.y + 1.0, PA.usbcZ]],
-  clips: [[74, underDeck(R.usbc), UD.usbcA, 'down'], [62, onDeck(R.usbc), DZ.usbcA, 'up'], [72, onDeck(R.usbc), DZ.usbcA, 'up'], [PA.usbcX + 2.7, onDeck(R.usbc), -4, 'up']] });
+  info: 'Fixed lead of the official PSU. Under the deck to the divider, up its back edge beside the ZBT-2 lead, along the upper slot and up the right flank of Pi A.', use: 'PSU lead 1.5 m', fixedLen: 150,
+  pts: [[SOCK[4], STRIP.y, PSU_END], [SOCK[4], STRIP.y, UD.usbcA], [SOCK[4], underDeck(R.usbc), UD.usbcA], [53.6, underDeck(R.usbc), UD.usbcA], [USBC_DIV, 15.4, edgeZ(R.usbc)], [USBC_DIV, 37.6, edgeZ(R.usbc)], [53.8, onShelf(R.usbc), -15.0], [53.8, onShelf(R.usbc), UZ.usbcA], [PA.usbcX + 2.7, onShelf(R.usbc), UZ.usbcA], [PA.usbcX + 2.7, onShelf(R.usbc), PA.usbcZ - 1.6], [PA.usbcX + 2.2, US.y + 1.0, PA.usbcZ], [PA.usbcX, US.y + 1.0, PA.usbcZ]],
+  clips: [[44, underDeck(R.usbc), UD.usbcA, 'down'], [USBC_DIV, 22, edgeZ(R.usbc), 'back'], [USBC_DIV, 30, edgeZ(R.usbc), 'back'], [49, onShelf(R.usbc), UZ.usbcA, 'up'], [PA.usbcX + 2.7, onShelf(R.usbc), 0, 'up']] });
 
 addCable({ id: 'usbcB', kind: 'usbc', short: 'server Pi power lead', name: 'Power · PSU → Pi B (USB-C)', real: 0x1d1e21, code: 0xff4fa3, step: 5, plugA: null, plugB: 'usbc',
-  info: 'Fixed 1.2 m lead of the official PSU, same route as Pi A on its own lanes.', use: 'PSU lead 1.2 m', fixedLen: 120,
-  pts: [[SOCK[2], STRIP.y, PSU_END], [SOCK[2], STRIP.y, UD.usbcB], [SOCK[2], underDeck(R.usbc), UD.usbcB], [76.2, underDeck(R.usbc), UD.usbcB], [77.6, 13.2, -16.55], [ox(R.usbc), 13.2, -16.55], [ox(R.usbc), 13.2, RZ.usbcB], [ox(R.usbc), 19.5, RZ.usbcB], [ox(R.usbc), 19.5, -16.6], [78.2, 19.5, -16.6], [77, onDeck(R.usbc), DZ.usbcB], [PB.usbcX + 2.7, onDeck(R.usbc), DZ.usbcB], [PB.usbcX + 2.7, onDeck(R.usbc), PB.usbcZ - 1.6], [PB.usbcX + 2.2, LS.y + 1.0, PB.usbcZ], [PB.usbcX, LS.y + 1.0, PB.usbcZ]],
-  clips: [[63, underDeck(R.usbc), UD.usbcB, 'down'], [72, underDeck(R.usbc), UD.usbcB, 'down'], [PB.usbcX + 2.7, onDeck(R.usbc), -4, 'up']] });
+  info: 'Same route as Pi A on its own lanes, up between the two Pis.', use: 'PSU lead 1.5 m', fixedLen: 150,
+  pts: [...fromBase('usbcB', R.usbc, SOCK[3], 13.6), ...riserUp('usbcB', R.usbc, 13.6), [PB.usbcX + 2.7, onShelf(R.usbc), UZ.usbcB], [PB.usbcX + 2.7, onShelf(R.usbc), PB.usbcZ - 1.6], [PB.usbcX + 2.2, US.y + 1.0, PB.usbcZ], [PB.usbcX, US.y + 1.0, PB.usbcZ]],
+  clips: [[22, underDeck(R.usbc), UD.usbcB, 'down'], [ox(R.usbc), 19, RZ.usbcB, 'left'], [ox(R.usbc), 27, RZ.usbcB, 'left'], [ox(R.usbc), 35, RZ.usbcB, 'left'], [28, onShelf(R.usbc), UZ.usbcB, 'up'], [PB.usbcX + 2.7, onShelf(R.usbc), 0, 'up']] });
 
-addCable({ id: 'ssdA', kind: 'usb3', short: 'SSD A lead', name: 'USB 3 · Pi A → SSD A', real: 0x1d1e21, code: 0x2fbf71, step: 4, plugA: 'usba', plugB: 'usbc', bend: 0.9,
-  info: 'Blue USB 3 port to the SSD, a short U behind the two devices.', use: 'USB-A to USB-C, 20 to 30 cm',
-  pts: [[PA.usb3, LS.y + 0.9, PA.rear], [PA.usb3, LS.y + 0.9, PA.rear - 2.8], [PA.usb3, LS.y + R.usb3, PA.rear - 6.2], [SSDA.x0 + 4, LS.y + R.usb3, PA.rear - 6.2], [SSDA.x0 + 4, LS.y + 0.7, SSD_REAR - 2.2], [SSDA.x0 + 4, LS.y + 0.7, SSD_REAR]] });
+addCable({ id: 'hubdc', kind: 'dc', short: 'hub power lead', name: 'Power · USB hub', real: 0x1d1e21, code: 0xf2b705, step: 5, plugA: null, plugB: 'dc',
+  info: 'From socket 2 under the deck, up the riser, into the left end of the hub.', use: 'Hub PSU lead',
+  pts: [...fromBase('hub', R.dc, SOCK[1], 13.0), ...riserUp('hub', R.dc, 13.0), [7.6, onShelf(R.dc), UZ.hub], [7.6, US.y + 1.0, HUB.z - 0.8], [HUB.x0 - 2.0, US.y + 1.0, HUB.z - 0.8], [HUB.x0, US.y + 1.0, HUB.z - 0.8]],
+  clips: [[10, underDeck(R.dc), UD.hub, 'down'], [ox(R.dc), 21, RZ.hub, 'left'], [ox(R.dc), 39, RZ.hub, 'left']] });
 
-addCable({ id: 'ssdB', kind: 'usb3', short: 'SSD B lead', name: 'USB 3 · Pi B → SSD B', real: 0x1d1e21, code: 0x8bd346, step: 4, plugA: 'usba', plugB: 'usbc', bend: 0.9,
-  info: 'Same short U as SSD A.', use: 'USB-A to USB-C, 20 to 30 cm',
-  pts: [[PB.usb3, LS.y + 0.9, PB.rear], [PB.usb3, LS.y + 0.9, PB.rear - 2.8], [PB.usb3, LS.y + R.usb3, PB.rear - 6.2], [SSDB.x0 + 4, LS.y + R.usb3, PB.rear - 6.2], [SSDB.x0 + 4, LS.y + 0.7, SSD_REAR - 2.2], [SSDB.x0 + 4, LS.y + 0.7, SSD_REAR]] });
+addCable({ id: 'up', kind: 'usb3', short: 'hub upstream lead', name: 'USB 3 · Pi B → hub', real: 0x1d1e21, code: 0x2fbf71, step: 4, plugA: 'usba', plugB: 'usbc',
+  info: 'Blue USB 3 port of the server Pi, over its LAN lead and into the right end of the hub.', use: 'USB 3 lead, 0.3 m',
+  pts: [[PB.usb3, US.y + 1.45, PB.rear], [PB.usb3, US.y + 1.45, PB.rear - 2.8], [PB.usb3, 41.0, PB.rear - 5.5], [HUB.x1 + 2.9, 41.0, PB.rear - 5.5], [HUB.x1 + 2.9, 41.0, HUB.z + 0.7], [HUB.x1 + 2.2, 41.0, HUB.z + 0.7], [HUB.x1, 41.0, HUB.z + 0.7]] });
+
+BOOKS.forEach((x, i) => addCable({ id: 'ssd' + (i + 1), kind: 'usb3', short: `SSD ${i + 1} lead`, name: `USB 3 · hub → SSD ${i + 1}`, real: 0x1d1e21, code: [0x8bd346, 0x5fcf8a, 0x3ab7a0, 0x9fe07a][i], step: 4, plugA: 'usbc', plugB: 'usba', bend: 0.8,
+  info: 'Short loop from the back of the SSD down into the hub port behind it.', use: 'USB-C to USB-A, 15 to 20 cm',
+  pts: [[x, US.y + 4, SSD_REAR], [x, US.y + 4, SSD_REAR - 2.2], [x, US.y + 6.2 + i * 0.15, SSD_REAR - 3.6], [x, US.y + HUB.h + 2.8, HUB.z], [x, US.y + HUB.h, HUB.z]] }));
 
 addCable({ id: 'zbt', kind: 'usbz', short: 'ZBT-2 lead', name: 'USB · Pi A → ZBT-2', real: 0xf1f1ee, code: 0x00c2a8, step: 6, plugA: 'usba', plugB: 'usbc',
-  info: 'The supplied 1.5 m lead. Upper black USB 2.0 port, over the SSD lead, along the back edge of the deck (in holders on the edge face), up behind the ZBT-2.', use: 'Supplied lead 1.5 m', fixedLen: 150,
-  pts: [[PA.usb2, LS.y + 2.0, PA.rear], [PA.usb2, LS.y + 2.0, PA.rear - 2.8], [PA.usb2, onDeck(R.usbz), PA.rear - 11], [PA.usb2, onDeck(R.usbz), -14.4], [PA.usb2, onDeck(R.usbz), -15.95], [PA.usb2 - 0.6, 17.25, deckEdgeZ(R.usbz)], [ZB2.x + 1.4, 17.25, deckEdgeZ(R.usbz)], [ZB2.x, onDeck(R.usbz), -15.95], [ZB2.x, onDeck(R.usbz), -9.5], [ZB2.x, ZB2.y + 0.75, -6.5], [ZB2.x, ZB2.y + 0.75, -4.2]],
-  clips: [[13, 17.25, deckEdgeZ(R.usbz), 'back'], [22, 17.25, deckEdgeZ(R.usbz), 'back'], [31, 17.25, deckEdgeZ(R.usbz), 'back'], [40, 17.25, deckEdgeZ(R.usbz), 'back'], [ZB2.x, onDeck(R.usbz), -12.5, 'up']] });
+  info: 'The supplied 1.5 m lead. Black USB 2.0 port, over the power lead, along the back of the upper slot, down the back edge of the divider beside the Pi A power lead and along the back edge of the deck, all in holders.', use: 'Supplied lead 1.5 m', fixedLen: 150,
+  pts: [[PA.usb2, US.y + 2.3, PA.rear], [PA.usb2, US.y + 2.3, PA.rear - 2.8], [PA.usb2, 41.0, PA.rear - 5.5], [52.6, 41.0, PA.rear - 5.5], [52.6, 41.0, -14.2], [53.6, onShelf(R.usbz), -14.9], [55.0, 39.6, -16.1], [DIVX, 37.5, edgeZ(R.usbz)], [DIVX, 17.25, edgeZ(R.usbz)], [ZB2.x - 1.4, 17.25, edgeZ(R.usbz)], [ZB2.x, onDeck(R.usbz), -15.95], [ZB2.x, onDeck(R.usbz), -9.5], [ZB2.x, ZB2.y + 0.75, -6.5], [ZB2.x, ZB2.y + 0.75, -4.2]],
+  clips: [[DIVX, 34, edgeZ(R.usbz), 'back'], [DIVX, 26, edgeZ(R.usbz), 'back'], [62, 17.25, edgeZ(R.usbz), 'back'], [69, 17.25, edgeZ(R.usbz), 'back'], [ZB2.x, onDeck(R.usbz), -12.5, 'up']] });
 
 addCable({ id: 'mains', kind: 'mains', short: 'mains lead', name: 'Mains · strip → wall socket', real: 0x1d1e21, code: 0xe5484d, step: 2, plugA: null, plugB: null, bend: 1.6,
-  info: 'Leaves the strip at its right end, drops below the other leads, out through the open back and up to the socket behind the tall end. Use a strip with a flat angled plug so the table can stay 4 cm off the wall.', use: 'Strip lead, flat angled plug',
-  pts: [[STRIP.x1, STRIP.y, -2.75], [STRIP.x1 + 0.9, STRIP.y, -2.75], [STRIP.x1 + 0.9, 9.0, -9.0], [STRIP.x1 + 0.9, 9.0, -14.5], [SOCKET.x + 1.1, 9.0, -18.3], [SOCKET.x, 11, -18.3], [SOCKET.x, 27.4, -18.3]] });
-// Angled flat plug in the wall socket.
-addItem(boxAt([SOCKET.x - 1.9, SOCKET.x + 1.9], [27.2, 32.4], [WALL + 0.4, WALL + 2.9], std(0x1d1e21, 0.5), 0.6), { wall: true, name: 'Flat angled plug', dims: '2.5 cm deep', info: 'Keeps the plug inside the 4 cm wall gap.', step: 2 });
+  info: 'Leaves the strip at its right end, drops below the other leads and goes out through the open back to the socket. Use a strip with a flat angled plug so the table can stay 4 cm off the wall.', use: 'Strip lead, flat angled plug',
+  pts: [[STRIP.x1, STRIP.y, -2.75], [STRIP.x1 + 0.9, STRIP.y, -2.75], [STRIP.x1 + 0.9, 6.6, -9.0], [STRIP.x1 + 0.9, 6.6, -14.5], [SOCKET.x - 1.1, 6.6, -18.3], [SOCKET.x, 7.2, -18.3], [SOCKET.x, SOCKET.y - 2.6, -18.3]] });
+addItem(boxAt([SOCKET.x - 1.9, SOCKET.x + 1.9], [SOCKET.y - 2.8, SOCKET.y + 2.4], [WALL + 0.4, WALL + 2.9], std(0x1d1e21, 0.5), 0.6), { wall: 'back', name: 'Flat angled plug', dims: '2.5 cm deep', info: 'Keeps the plug inside the 4 cm wall gap.', step: 2 });
 
 // ---------- labels ----------
 const labelAt = (meta, text, p) => addLabel(text, p, '', meta);
-labelAt(fritz, 'FRITZ!Box 6660 Cable', V(FB.cx, 49.4, 4));
-labelAt(piA, 'Pi 5 · Home Assistant', V(PIA.x0 + 3.15, 25.6, 3));
-labelAt(piB, 'Pi 5 · Server', V(PIB.x0 + 3.15, 25.6, 3));
-labelAt(ssdA, 'SSD A', V(SSDA.x0 + 4, 20.2, 12));
-labelAt(ssdB, 'SSD B', V(SSDB.x0 + 4, 20.2, 12));
+labelAt(fritz, 'FRITZ!Box 6660 Cable', V(FB.cx, 27.5, 2));
+labelAt(piA, 'Pi 4 · Home Assistant', V(PIA.x0 + 3.25, 45.4, 9));
+labelAt(piB, 'Pi 4 · Server', V(PIB.x0 + 3.25, 47.2, 5));
+labelAt(ssds[1], 'SSDs + hub', V(15, 49.4, 6));
 labelAt(zbt, 'ZBT-2', V(ZB2.x, 38.2, 0));
-labelAt(psuB, 'Power deck', V(60, 6.0, -8));
+labelAt(psuB, 'Power deck', V(20, 6.0, -8));
 const zoneDefs = [
-  ['Upper slot · 53 × 30.5 × 10.5', V(31.5, 48.5, 14)],
-  ['Lower slot · 53 × 30.5 × 20.5', V(31.5, 36.5, 14)],
-  ['Niche · 32.5 high', V(5, 48.5, 14)],
-  ['Base · 16.5 high, rail at 7', V(10, 14.5, 14)],
+  ['Upper slot · 53 × 30.5 × 10.5', V(49, 48.5, 14)],
+  ['Lower slot · 53 × 30.5 × 20.5', V(49, 36.5, 14)],
+  ['Niche · 32.5 high', V(75.5, 48.5, 14)],
+  ['Base · 16.5 high, rail at 7', V(70, 14.5, 14)],
 ];
 for (const [t, p] of zoneDefs) addLabel(t, p, 'zone', { step: 1 }, 'zone');
 
@@ -739,7 +780,7 @@ const dimMat = new THREE.LineBasicMaterial({ color: 0x1f4fb5, depthTest: false, 
 const rfMat = new THREE.LineDashedMaterial({ color: 0x1f4fb5, dashSize: 1.6, gapSize: 1.0, depthTest: false, transparent: true });
 function dimLine(a, b, text, tick = V(0, 1, 0), cls = 'dim', mat = dimMat) {
   const pts = [a, b, a.clone().addScaledVector(tick, 1.2), a.clone().addScaledVector(tick, -1.2), b.clone().addScaledVector(tick, 1.2), b.clone().addScaledVector(tick, -1.2)];
-  const g = new THREE.BufferGeometry().setFromPoints([pts[0], pts[1], pts[2], pts[3], pts[4], pts[5]]);
+  const g = new THREE.BufferGeometry().setFromPoints(pts);
   const seg = new THREE.LineSegments(g, mat); seg.renderOrder = 10;
   if (mat.isLineDashedMaterial) seg.computeLineDistances();
   dimGroup.add(seg);
@@ -748,27 +789,29 @@ function dimLine(a, b, text, tick = V(0, 1, 0), cls = 'dim', mat = dimMat) {
 }
 const fz = ZF + 4;
 dimLine(V(0, 0.3, fz), V(L, 0.3, fz), '80.5', V(0, 1, 0));
-dimLine(V(L + 4, H, ZB), V(L + 4, H, ZF), '30.5', V(0, 1, 0));
+dimLine(V(L + 2, H, ZB), V(L + 2, H, ZF), '30.5', V(0, 1, 0));
 dimLine(V(L + 4, 0, ZF), V(L + 4, H, ZF), '52', V(1, 0, 0));
-dimLine(V(X.tall0 - 2, Y.shelf1, ZF + 1), V(X.tall0 - 2, Y.top0, ZF + 1), '10.5', V(1, 0, 0));
-dimLine(V(X.tall0 - 2, Y.deck1, ZF + 1), V(X.tall0 - 2, Y.shelf0, ZF + 1), '20.5', V(1, 0, 0));
-dimLine(V(3, Y.deck1, ZF + 1), V(3, Y.top0, ZF + 1), '32.5', V(1, 0, 0));
-dimLine(V(4, 0, ZF + 1), V(4, Y.deck1, ZF + 1), '18', V(1, 0, 0));
-const ZANT = V(ZB2.x, ZB2.y + 9, ZB2.z), FBC = V(FB.cx, FB.y0 + 2.5, 0), SSDC = V(SSDA.x0 + 4, LS.y + 0.7, LINE_Z - 6.3);
-const dRouter = ZANT.distanceTo(FBC), dSSD = ZANT.distanceTo(SSDC), dUSB3 = ZANT.distanceTo(V(PA.usb3, LS.y + 1, PA.rear));
+dimLine(V(TX.div[0] - 2, Y.shelf1, ZF + 1), V(TX.div[0] - 2, Y.top0, ZF + 1), '10.5', V(1, 0, 0));
+dimLine(V(TX.div[0] - 2, Y.deck1, ZF + 1), V(TX.div[0] - 2, Y.shelf0, ZF + 1), '20.5', V(1, 0, 0));
+dimLine(V(L - 3, Y.deck1, ZF + 1), V(L - 3, Y.top0, ZF + 1), '32.5', V(1, 0, 0));
+dimLine(V(SIDE, 3, WALL + 0.5), V(0, 3, WALL + 0.5), '6 cm gap', V(0, 1, 0));
+const ZANT = V(ZB2.x, ZB2.y + 9, ZB2.z), FBC = V(FB.cx, FB.y0 + 2.5, (FB.z0 + FB.z1) / 2), SSDC = V(BOOKS[3], US.y + 4, LINE_Z - 6.3);
+const dRouter = ZANT.distanceTo(FBC), dSSD = ZANT.distanceTo(SSDC);
+const dUSB3 = Math.min(ZANT.distanceTo(V(PB.usb3, US.y + 1.4, PB.rear)), ZANT.distanceTo(V(HUB.x1, US.y + 1, HUB.z)));
 dimLine(ZANT, FBC, `${Math.round(dRouter)} cm to WiFi`, V(0, 1, 0), 'rf', rfMat);
 dimLine(ZANT, SSDC, `${Math.round(dSSD)} cm to SSD`, V(0, 1, 0), 'rf', rfMat);
 dimGroup.visible = false; dimLabels.forEach(o => (o.visible = false));
 
-// ---------- clip count, sheet content ----------
+// ---------- sheet content ----------
+const holeCable = () => cables.find(c => c.id === 'hole');
 const STEPS = [
-  { t: 'Place the table', d: 'Stand the HOLMERUD 4 cm off the wall. It has no back panel, so every cable leaves through the back. Nothing to drill.', view: 'room' },
-  { t: 'Power deck', d: 'Screw the 5-way strip to the back face of the centre rail, sockets to the wall. Plug in the three supplies: FRITZ!Box on 1, Pi B on 3, Pi A on 5, the socket nearest the riser. Mains goes up to the wall socket.', view: 'under' },
-  { t: 'Router', d: 'FRITZ!Box centred in the 10.5 cm upper slot, ports to the back. Coax rises from the wall outlet behind the tall end; the DC lead comes up the riser.', view: 'upper' },
-  { t: 'Compute', d: 'In the lower slot from left: SSD A, Pi A, SSD B, Pi B, fronts on one line 6 cm in from the edge. Each SSD sits left of its Pi, next to the blue USB 3 ports.', view: 'lower' },
-  { t: 'Riser', d: 'Both LAN leads and both Pi power leads climb the outer face of the tall end panel near the back corner, then run along the back of each shelf to their port.', view: 'riser' },
-  { t: 'Zigbee', d: `ZBT-2 stands in the open niche at the low end, ${Math.round(dRouter)} cm from the router and ${Math.round(dSSD)} cm from the nearest SSD. Its lead runs in holders on the back edge of the deck.`, view: 'niche' },
-  { t: 'Clip it', d: `${clipCount.holder} adhesive holders and ${clipCount.nail} nail clip from the TRIXIG set hold every run to an edge, a shelf or an underside. ${50 - clipCount.holder} holders stay in the box.`, view: 'back' },
+  { t: 'Place the table', d: 'Tall end into the left corner, back to the LAN wall: 4 cm off the back wall, 6 cm off the side wall. The table has no back panel, so every cable leaves through the back. Nothing to drill.', view: 'room' },
+  { t: 'Power deck', d: 'Screw the 5-way strip to the back face of the centre rail, sockets to the wall. Counting from the corner: FRITZ!Box on 1, hub on 2, server Pi on 4, Home Assistant Pi on 5. Mains goes out the back to the wall socket.', view: 'under' },
+  { t: 'Router', d: `FRITZ!Box flat in the lower slot, hard against the tall end, ports to the wall. Power and the cable port sit at the corner end, and the cable from the LAN hole reaches LAN 4 with ${Math.round(holeCable().length)} cm of its 30. Coax comes round the corner from the side wall.`, view: 'lower' },
+  { t: 'Compute', d: 'Upper slot from the corner: the four SSDs standing on edge like books with your powered hub behind them, then the server Pi, then the Home Assistant Pi.', view: 'upper' },
+  { t: 'Riser', d: 'Both LAN leads, the server Pi power and the hub power climb the outer face of the tall end inside the corner gap. The Home Assistant Pi power takes the short way up the back edge of the divider. Both then run along the back of the upper slot to their ports.', view: 'riser' },
+  { t: 'Zigbee', d: `ZBT-2 stands in the open niche at the room end: ${Math.round(dRouter)} cm from the router, ${Math.round(dSSD)} cm from the nearest SSD. Its lead comes down the back edge of the divider and along the deck in holders.`, view: 'niche' },
+  { t: 'Clip it', d: `${clipCount.holder} adhesive holders from the TRIXIG set hold every run to an edge, a shelf or an underside. ${50 - clipCount.holder} stay in the box.`, view: 'back' },
 ];
 const stepsEl = document.getElementById('steps');
 STEPS.forEach((s, i) => {
@@ -780,26 +823,31 @@ STEPS.forEach((s, i) => {
 
 document.getElementById('rf').innerHTML =
   `<b>${Math.round(dRouter)} cm</b> from the ZBT-2 antenna to the FRITZ!Box, <b>${Math.round(dSSD)} cm</b> to the nearest SSD and <b>${Math.round(dUSB3)} cm</b> to the nearest USB 3 port, with the divider in between. ` +
-  `The ZBT-2 already ships with a 1.5 m lead to get this distance, and the niche uses most of it. Keep Zigbee on channel 15, 20 or 25 and put the FRITZ!Box 2.4 GHz WiFi on a channel at the other end of the band.`;
+  `The short wall cable pins the router to the corner, and the hub and SSDs sit at the same end, so the noisiest parts are all far from the stick. Keep Zigbee on channel 15, 20 or 25 and the FRITZ!Box 2.4 GHz WiFi at the other end of the band.`;
 
 const cablesEl = document.getElementById('cables');
 const hex = c => '#' + new THREE.Color(c).getHexString();
 for (const c of cables) {
+  if (c.id.startsWith('ssd') && c.id !== 'ssd1') continue;
   const tr = document.createElement('tr'); tr.className = 'cable'; tr.tabIndex = 0; tr.dataset.id = c.id;
-  const use = c.fixedLen ? `${c.use}, ${Math.round(c.fixedLen - c.length)} cm slack to coil` : c.use;
-  tr.innerHTML = `<td><span class="sw" style="background:${hex(c.code)}"></span>${c.name}</td><td class="r num">${(c.length / 100).toFixed(2)} m</td><td>${use}</td>`;
-  const on = () => highlightCable(c); const off = () => highlightCable(null);
+  const isSSD = c.id === 'ssd1';
+  const name = isSSD ? 'USB 3 · hub → SSD 1 to 4' : c.name;
+  const use = c.fixedLen ? `${c.use}, ${Math.round(c.fixedLen - c.length)} cm to spare` : c.use;
+  tr.innerHTML = `<td><span class="sw" style="background:${hex(c.code)}"></span>${name}</td><td class="r num">${isSSD ? '4 × ' : ''}${(c.length / 100).toFixed(2)} m</td><td>${use}</td>`;
+  const group = isSSD ? cables.filter(k => k.id.startsWith('ssd')) : [c];
+  const on = () => highlightCable(group); const off = () => highlightCable(null);
   tr.addEventListener('mouseenter', on); tr.addEventListener('mouseleave', off);
   tr.addEventListener('focus', on); tr.addEventListener('blur', off);
-  tr.addEventListener('click', () => { setStep(0); highlightCable(c, true); });
+  tr.addEventListener('click', () => { setStep(0); highlightCable(group); });
   cablesEl.appendChild(tr);
 }
-const ethLen = id => cables.find(c => c.id === id).length / 100;
+const lenOf = id => cables.find(c => c.id === id).length / 100;
 const buy = [
   `Power strip, 5-way with switch, keyhole mounts and a flat angled plug. Two 3.5 × 12 mm screws for the rail.`,
-  `2 slim Cat 6a patch leads (3.8 mm, they fit the small TRIXIG holders): 1.5 m and 1 m. Routed lengths are ${ethLen('lanA').toFixed(2)} m and ${ethLen('lanB').toFixed(2)} m.`,
-  `2 short USB-A to USB-C leads, 20 to 30 cm, for the SSD enclosures (or whatever port your enclosures have).`,
-  `Optional: a pair of 90° USB-C adaptors for the Pi power inputs, so the plugs don't stick out of the lower slot.`,
+  `2 slim Cat 6a patch leads (3.8 mm, they fit the small TRIXIG holders): 1.5 m for the Home Assistant Pi (routed ${lenOf('lanA').toFixed(2)} m) and 1 m for the server Pi (routed ${lenOf('lanB').toFixed(2)} m).`,
+  `A 0.3 m USB 3 lead from the server Pi to the hub (routed ${lenOf('up').toFixed(2)} m), and 4 short USB leads, 15 to 20 cm, from the hub to the SSDs.`,
+  `Optional: 90° USB-C adaptors for the two Pi power inputs, so the plugs don't stick out of the upper slot.`,
+  `Optional: an RJ45 coupler and a 1 m patch lead on the wall cable. With that the router could move up to the upper slot for better WiFi.`,
 ];
 document.getElementById('buy').innerHTML = buy.map(t => `<li>${t}</li>`).join('');
 
@@ -829,16 +877,16 @@ document.getElementById('prev').addEventListener('click', () => setStep(Math.max
 document.getElementById('all').addEventListener('click', () => { setStep(0); flyTo('room'); });
 
 const VIEWS = {
-  room: [V(150, 92, 158), V(42, 24, 0)],
+  room: [V(150, 92, 158), V(38, 24, 0)],
   front: [V(40.25, 30, 190), V(40.25, 26, 0)],
-  back: [V(30, 60, -150), V(46, 22, -8)],
-  side: [V(178, 50, 46), V(70, 24, -8)],
+  back: [V(50, 60, -150), V(34, 22, -8)],
+  side: [V(-98, 50, 46), V(10, 24, -8)],
   top: [V(40.25, 230, 12), V(40.25, 20, 0)],
-  under: [V(18, 42, -125), V(54, 12, -6)],
-  upper: [V(70, 60, 95), V(52, 42, -2)],
-  lower: [V(64, 34, 92), V(52, 20, 0)],
-  riser: [V(150, 50, -80), V(76, 26, -12)],
-  niche: [V(-78, 62, 118), V(20, 26, -2)],
+  under: [V(62, 42, -125), V(26, 12, -6)],
+  upper: [V(26, 66, 92), V(27, 43, -2)],
+  lower: [V(40, 36, 96), V(16, 21, -4)],
+  riser: [V(-70, 52, -70), V(2, 28, -12)],
+  niche: [V(158, 62, 118), V(60, 26, -2)],
 };
 let tween = null;
 function flyTo(name) {
@@ -871,16 +919,18 @@ document.querySelectorAll('[data-finish]').forEach(b => b.addEventListener('clic
 
 // Cable highlight from the schedule
 let hiCable = null;
-function highlightCable(c, fly = false) {
-  hiCable = c;
+function highlightCable(c) {
+  const set = c ? (Array.isArray(c) ? c : [c]) : null;
+  hiCable = set;
   const acc = accentColor();
   for (const k of cables) {
-    const on = !c || k === c;
+    const lit = !!set && set.includes(k), on = !set || lit;
     k.mat.transparent = !on; k.mat.opacity = on ? 1 : 0.18; k.mat.depthWrite = on;
-    k.mat.emissive.copy(c && k === c ? acc : new THREE.Color(0)); k.mat.emissiveIntensity = c && k === c ? 0.55 : 0;
+    k.mat.emissive.copy(lit ? acc : new THREE.Color(0)); k.mat.emissiveIntensity = lit ? 0.55 : 0;
     k.mat.needsUpdate = true;
   }
-  document.querySelectorAll('tr.cable').forEach(tr => tr.classList.toggle('on', !!c && tr.dataset.id === c.id));
+  const ids = set ? set.map(k => (k.id.startsWith('ssd') ? 'ssd1' : k.id)) : [];
+  document.querySelectorAll('tr.cable').forEach(tr => tr.classList.toggle('on', ids.includes(tr.dataset.id)));
   requestRender();
 }
 
@@ -993,8 +1043,9 @@ function frame(now) {
   const damping = controls.update();
   if (!needs && !damping) return;
   needs = false;
-  wallG.visible = state.wall && camera.position.z > WALL + 0.5;
-  for (const it of wallItems) it.obj.visible = wallG.visible && it.step <= (currentStep || 99);
+  wallBack.visible = state.wall && camera.position.z > WALL + 0.5;
+  wallSide.visible = state.wall && camera.position.x > SIDE + 0.5;
+  for (const it of wallItems) it.obj.visible = (it.wall === 'side' ? wallSide.visible : wallBack.visible) && it.step <= (currentStep || 99);
   if (pendingPointer) {
     const [x, y] = pendingPointer; pendingPointer = null;
     const m = pick(x, y); setHover(m); showTip(m, x, y);
